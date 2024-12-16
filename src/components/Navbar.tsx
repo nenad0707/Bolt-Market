@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <nav className="bg-gradient-to-r from-indigoBlue via-indigo-700 to-lightOrange text-white px-4 py-3 flex justify-between items-center shadow-md">
       <div className="flex items-center space-x-2">
-        <div className="bg-white rounded-full p-2 drop-shadow-lg">
+        <div className="bg-white rounded-full p-2 drop-shadow-lg hover:shadow-2xl transition-all">
           <img src="/logo.svg" alt="Bolt Market Logo" className="h-8 w-8" />
         </div>
         <span className="hidden md:block text-xl font-bold">Bolt Market</span>
@@ -24,38 +24,35 @@ const Navbar = () => {
 
       <ul className="hidden md:flex space-x-6">
         <li>
-          <Link to="/" className="hover:text-lightOrange transition-colors">
+          <Link to="/" className="hover:text-lightOrange transition-all">
             Home
           </Link>
         </li>
         <li>
           <Link
             to="/products"
-            className="hover:text-lightOrange transition-colors"
+            className="hover:text-lightOrange transition-all"
           >
             Products
           </Link>
         </li>
         <li>
-          <Link
-            to="/about"
-            className="hover:text-lightOrange transition-colors"
-          >
+          <Link to="/about" className="hover:text-lightOrange transition-all">
             About
           </Link>
         </li>
         <li>
-          <Link
-            to="/contact"
-            className="hover:text-lightOrange transition-colors"
-          >
+          <Link to="/contact" className="hover:text-lightOrange transition-all">
             Contact
           </Link>
         </li>
       </ul>
 
       <div className="flex items-center">
-        <Link to="/cart" className="hover:text-lightOrange transition-colors">
+        <Link
+          to="/cart"
+          className="hover:bg-lightOrange hover:text-white transition-colors p-2 rounded-full"
+        >
           <ShoppingCartIcon className="h-6 w-6" />
         </Link>
       </div>
@@ -84,28 +81,28 @@ const Navbar = () => {
           </button>
           <Link
             to="/"
-            className="text-xl hover:text-lightOrange"
+            className="text-xl hover:text-lightOrange active:text-orange transition-all"
             onClick={closeMenu}
           >
             Home
           </Link>
           <Link
             to="/products"
-            className="text-xl hover:text-lightOrange"
+            className="text-xl hover:text-lightOrange active:text-orange transition-all"
             onClick={closeMenu}
           >
             Products
           </Link>
           <Link
             to="/about"
-            className="text-xl hover:text-lightOrange"
+            className="text-xl hover:text-lightOrange active:text-orange transition-all"
             onClick={closeMenu}
           >
             About
           </Link>
           <Link
             to="/contact"
-            className="text-xl hover:text-lightOrange"
+            className="text-xl hover:text-lightOrange active:text-orange transition-all"
             onClick={closeMenu}
           >
             Contact
