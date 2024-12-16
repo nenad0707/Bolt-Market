@@ -23,10 +23,12 @@ const Hero = () => {
         </motion.p>
 
         <motion.a
+          whileHover={{
+            scale: 1.05,
+            boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.2)",
+          }}
+          whileTap={{ scale: 0.95 }}
           href="/products"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 1 }}
           className="inline-block bg-white text-indigoBlue font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-lightGray transition"
         >
           Shop Now
