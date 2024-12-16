@@ -9,16 +9,19 @@ const statistics = [
 
 const Statistics = () => {
   return (
-    <section className="bg-lightGray py-12">
+    <section className="bg-gray-100 py-12">
       <div className="container mx-auto px-4">
+        {/* Naslov sekcije */}
         <h2 className="text-3xl font-bold text-center text-indigoBlue mb-8">
           Our Statistics
         </h2>
+
+        {/* Grid sa karticama */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
           {statistics.map((stat) => (
             <div
               key={stat.id}
-              className="bg-gradient-to-b from-lightGray to-white rounded-lg border border-indigo-200 shadow-md p-6 flex flex-col items-center"
+              className="bg-gradient-to-b from-gray-100 to-white rounded-lg border border-gray-200 shadow-md p-6 flex flex-col items-center"
             >
               <div className="text-5xl text-orange mb-2">{stat.icon}</div>
               <h3 className="text-4xl font-bold text-indigoBlue">
