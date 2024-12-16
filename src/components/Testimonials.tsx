@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const testimonials = [
   {
@@ -39,10 +39,20 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
+  const { scrollYProgress } = useScroll();
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "-30%"]);
+
   const extendedTestimonials = [...testimonials, ...testimonials];
 
   return (
-    <section className="bg-lightGray text-gray-600 py-16">
+    <motion.section
+      style={{
+        backgroundImage:
+          "linear-gradient(to bottom, #f7fafc, #e2e8f0, #cbd5e1)",
+        backgroundPositionY: backgroundY,
+      }}
+      className="text-gray-600 py-16 bg-fixed bg-cover"
+    >
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold text-center text-indigoBlue mb-8">
           What Our Customers Say
@@ -89,7 +99,7 @@ const Testimonials = () => {
           </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
