@@ -30,12 +30,10 @@ const Testimonials = () => {
   return (
     <section className="bg-lightGray text-gray-600 py-16">
       <div className="container mx-auto">
-        {/* Naslov */}
         <h2 className="text-3xl font-bold text-center text-indigoBlue mb-8">
           What Our Customers Say
         </h2>
 
-        {/* Testimonial Slider */}
         <div className="overflow-hidden relative">
           <motion.div
             className="flex"
