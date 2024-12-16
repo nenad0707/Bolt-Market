@@ -51,9 +51,10 @@ const Navbar = () => {
       <div className="flex items-center">
         <Link
           to="/cart"
-          className="hover:bg-lightOrange hover:text-white transition-colors p-2 rounded-full"
+          className="relative hover:bg-lightOrange hover:shadow-lg text-white p-3 rounded-full transition-all duration-300"
         >
           <ShoppingCartIcon className="h-6 w-6" />
+          <div className="absolute inset-0 rounded-full border-2 border-white opacity-50 hover:opacity-100 transition-all"></div>
         </Link>
       </div>
 
