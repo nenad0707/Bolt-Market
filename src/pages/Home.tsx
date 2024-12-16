@@ -3,7 +3,7 @@ import Statistics from "../components/Statistics";
 import Testimonials from "../components/Testimonials";
 
 const Home = () => (
-  <div className="text-center py-20 text-xl">
+  <div className="text-center text-xl">
     <Hero />
     <Statistics />
     <Testimonials />
