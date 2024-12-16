@@ -1,9 +1,12 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const Hero = () => {
+  const { scrollYProgress } = useScroll();
+  const yText = useTransform(scrollYProgress, [0, 1], ["0%", "-30%"]);
+
   return (
     <section className="bg-gradient-to-r from-indigoBlue to-lightOrange text-white h-[500px] flex items-center justify-center">
-      <div className="text-center px-4">
+      <motion.div style={{ y: yText }} className="text-center px-4">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -33,7 +36,7 @@ const Hero = () => {
         >
           Shop Now
         </motion.a>
-      </div>
+      </motion.div>
     </section>
   );
 };
