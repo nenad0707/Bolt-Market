@@ -1,3 +1,13 @@
-const Home = () => <div className="text-center py-20 text-xl">Home Page</div>;
+import Hero from "../components/Hero";
+import Statistics from "../components/Statistics";
+import Testimonials from "../components/Testimonials";
+
+const Home = () => (
+  <div className="text-center py-20 text-xl">
+    <Hero />
+    <Statistics />
+    <Testimonials />
+  </div>
+);
 
 export default Home;
