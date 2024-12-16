@@ -18,13 +18,13 @@ const Statistics = () => {
           {statistics.map((stat) => (
             <div
               key={stat.id}
-              className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center"
+              className="bg-gradient-to-b from-lightGray to-white rounded-lg border border-indigo-200 shadow-md p-6 flex flex-col items-center"
             >
-              <div className="text-5xl mb-2">{stat.icon}</div>
-              <h3 className="text-4xl font-bold text-indigo-700">
+              <div className="text-5xl text-orange mb-2">{stat.icon}</div>
+              <h3 className="text-4xl font-bold text-indigoBlue">
                 <Counter value={stat.value} />
               </h3>
-              <p className="text-gray-600">{stat.label}</p>
+              <p className="text-gray-700">{stat.label}</p>
             </div>
           ))}
         </div>
