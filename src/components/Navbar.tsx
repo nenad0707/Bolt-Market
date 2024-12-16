@@ -9,6 +9,10 @@ import {
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <nav className="bg-gradient-to-r from-indigoBlue via-indigo-700 to-lightOrange text-white px-4 py-3 flex justify-between items-center shadow-md">
       <div className="flex items-center space-x-2">
@@ -78,16 +82,32 @@ const Navbar = () => {
           >
             <XMarkIcon className="h-8 w-8" />
           </button>
-          <Link to="/" className="text-xl hover:text-lightOrange">
+          <Link
+            to="/"
+            className="text-xl hover:text-lightOrange"
+            onClick={closeMenu}
+          >
             Home
           </Link>
-          <Link to="/products" className="text-xl hover:text-lightOrange">
+          <Link
+            to="/products"
+            className="text-xl hover:text-lightOrange"
+            onClick={closeMenu}
+          >
             Products
           </Link>
-          <Link to="/about" className="text-xl hover:text-lightOrange">
+          <Link
+            to="/about"
+            className="text-xl hover:text-lightOrange"
+            onClick={closeMenu}
+          >
             About
           </Link>
-          <Link to="/contact" className="text-xl hover:text-lightOrange">
+          <Link
+            to="/contact"
+            className="text-xl hover:text-lightOrange"
+            onClick={closeMenu}
+          >
             Contact
           </Link>
         </div>
