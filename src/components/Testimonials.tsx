@@ -9,6 +9,21 @@ const testimonials = [
       "Bolt Market has the best variety of electronics at unbeatable prices. Highly recommend for tech lovers!",
   },
   {
+    name: "Holden Davis",
+    role: "Loyal Customer",
+    image: "src/assets/images/holden.jpg",
+    testimony:
+      "I've been shopping at Bolt Market for years and I'm always impressed with the quality of products and customer service.",
+  },
+  {
+    name: "John Johnson",
+    role: "Loyal Customer",
+    image: "src/assets/images/john.jpg",
+    testimony:
+      "Bolt Market's customer service is exceptional. They always go above and beyond to ensure I'm satisfied with my purchases.",
+  },
+
+  {
     name: "Emily Johnson",
     role: "Verified Buyer",
     image: "src/assets/images/emily.jpg",
