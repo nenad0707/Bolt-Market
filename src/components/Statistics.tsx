@@ -40,7 +40,6 @@ const Statistics = () => {
                 visible: { opacity: 1, y: 0 },
               }}
             >
-              {/* Heroicons ikonica sa pulsirajućim efektom */}
               <motion.div
                 animate={{ scale: [1, 1.1, 1] }}
                 transition={{ duration: 1.5, repeat: Infinity }}
@@ -49,7 +48,6 @@ const Statistics = () => {
                 <stat.icon className="w-12 h-12" aria-hidden="true" />
               </motion.div>
 
-              {/* Vrednost i opis */}
               <h3 className="text-4xl font-bold text-indigoBlue">
                 <Counter value={stat.value} />
               </h3>
