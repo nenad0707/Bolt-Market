@@ -2,69 +2,63 @@ import { motion } from "framer-motion";
 
 const testimonials = [
   {
-    name: "Holden Caulfield",
-    role: "UI DEVELOPER",
-    image: "https://dummyimage.com/106x106",
+    name: "Sara Smith",
+    role: "Happy Customer",
+    image: "/src/assets/images/sara.jpg",
     testimony:
-      "This platform has revolutionized our workflow! Highly recommend it to any modern team.",
+      "I ordered kitchen essentials and everything arrived quickly and perfectly packaged. Great quality and service!",
   },
   {
-    name: "Alper Kamu",
-    role: "DESIGNER",
-    image: "https://dummyimage.com/107x107",
+    name: "Michael Brown",
+    role: "Frequent Shopper",
+    image: "/src/assets/images/michael.jpg",
     testimony:
-      "Amazing experience with intuitive UI and smooth performance. A must-have tool!",
+      "Bolt Market has the best variety of electronics at unbeatable prices. Highly recommend for tech lovers!",
   },
   {
-    name: "John Doe",
-    role: "PROJECT MANAGER",
-    image: "https://dummyimage.com/108x108",
+    name: "Emily Johnson",
+    role: "Verified Buyer",
+    image: "/src/assets/images/emily.jpg",
     testimony:
-      "Excellent customer support and great design. It made our process so much faster.",
+      "The clothing section is my favorite! Stylish, affordable, and delivery is always on time.",
   },
 ];
 
 const Testimonials = () => {
+  const extendedTestimonials = [...testimonials, ...testimonials];
+
   return (
-    <section className="text-gray-600 body-font">
-      <div className="container px-5 py-24 mx-auto">
-        <h1 className="text-3xl font-medium title-font text-gray-900 mb-12 text-center">
-          Testimonials
+    <section className="bg-lightGray text-gray-600 body-font py-16">
+      <div className="container mx-auto">
+        <h1 className="text-4xl font-bold text-center text-gray-900 mb-8">
+          What Our Customers Say
         </h1>
-        <motion.div
-          className="flex flex-wrap -m-4"
-          animate={{ x: ["0%", "-100%"] }}
-          transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
-        >
-          {testimonials.map((item, index) => (
-            <div key={index} className="p-4 md:w-1/3 w-full">
-              <div className="h-full bg-gray-100 p-8 rounded shadow-lg">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  className="block w-5 h-5 text-gray-400 mb-4"
-                  viewBox="0 0 975.036 975.036"
-                >
-                  <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50z"></path>
-                </svg>
-                <p className="leading-relaxed mb-6">{item.testimony}</p>
-                <div className="inline-flex items-center">
-                  <img
-                    alt={item.name}
-                    src={item.image}
-                    className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center"
-                  />
-                  <span className="flex-grow flex flex-col pl-4">
-                    <span className="title-font font-medium text-gray-900">
-                      {item.name}
-                    </span>
-                    <span className="text-gray-500 text-sm">{item.role}</span>
-                  </span>
+        <div className="overflow-hidden relative">
+          <motion.div
+            className="flex"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
+          >
+            {extendedTestimonials.map((item, index) => (
+              <div key={index} className="p-4 w-80 flex-shrink-0">
+                <div className="h-full bg-white p-6 rounded-lg shadow-lg flex flex-col">
+                  <p className="leading-relaxed mb-4">{item.testimony}</p>
+                  <div className="flex items-center">
+                    <img
+                      alt={item.name}
+                      src={item.image}
+                      className="w-12 h-12 rounded-full object-cover"
+                    />
+                    <div className="ml-4">
+                      <h2 className="font-medium text-gray-900">{item.name}</h2>
+                      <p className="text-sm text-gray-500">{item.role}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </motion.div>
+            ))}
+          </motion.div>
+        </div>
       </div>
     </section>
   );
