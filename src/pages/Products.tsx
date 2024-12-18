@@ -1,5 +1,9 @@
+import HeroProducts from "../components/HeroProducts";
+
 const Products = () => (
-  <div className="text-center py-20 text-xl">Products Page</div>
+  <div className="text-center text-xl">
+    <HeroProducts />
+  </div>
 );
 
 export default Products;
