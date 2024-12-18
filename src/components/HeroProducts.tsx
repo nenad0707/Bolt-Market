@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import saleImage from "../assets/images/sale.jpg";
+import saleImage from "../assets/images/sale.webp";
 
 const HeroProducts = () => {
   const { scrollY } = useScroll();
