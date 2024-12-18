@@ -3,14 +3,19 @@ import saleImage from "../assets/images/sale.jpg";
 
 const HeroProducts = () => {
   const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 300], ["0%", "30%"]);
+
+  const y = useTransform(scrollY, [0, 300], [0, 100]);
 
   return (
     <section className="relative h-[500px] overflow-hidden">
-      <motion.div
-        style={{ y, backgroundImage: `url(${saleImage})` }}
-        className="absolute inset-0 w-full h-full bg-cover bg-center object-cover object-center"
-      ></motion.div>
+      <div className="absolute inset-0 overflow-hidden">
+        <motion.div style={{ y }} className="absolute inset-0 w-full h-full">
+          <div
+            style={{ backgroundImage: `url(${saleImage})` }}
+            className="w-full h-full bg-cover bg-center transform scale-110"
+          ></div>
+        </motion.div>
+      </div>
 
       <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/90 to-transparent"></div>
 
