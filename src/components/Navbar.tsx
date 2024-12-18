@@ -73,7 +73,7 @@ const Navbar = () => {
       </div>
 
       {isOpen && (
-        <div className="absolute top-0 left-0 w-full h-screen bg-gradient-to-r from-indigoBlue to-lightOrange text-white flex flex-col items-center justify-center space-y-6 z-10">
+        <div className="fixed  top-0 left-0 w-full h-screen bg-gradient-to-r from-indigoBlue to-lightOrange text-white flex flex-col items-center justify-center space-y-6 z-50">
           <button
             className="absolute top-4 right-4 text-white"
             onClick={() => setIsOpen(false)}
