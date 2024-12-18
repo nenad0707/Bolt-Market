@@ -1,9 +1,11 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
+
+const MotionLink = motion(Link);
 
 const Hero = () => {
   const { scrollYProgress } = useScroll();
-
   const yText = useTransform(scrollYProgress, [0, 1], ["0%", "-30%"]);
 
   const containerVariants = {
@@ -44,19 +46,19 @@ const Hero = () => {
         </motion.p>
 
         {/* CTA */}
-        <motion.a
+        <MotionLink
+          to="/products"
           variants={childVariants}
           whileHover={{
             scale: 1.05,
             boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.2)",
           }}
           whileTap={{ scale: 0.95 }}
-          href="/products"
           className="bg-gradient-to-r from-lightOrange to-indigoBlue text-white font-medium px-4 py-2 rounded-lg shadow-md hover:opacity-90 transition flex items-center justify-center"
         >
           Shop Now
           <ArrowRightIcon className="w-5 h-5 ml-1" />
-        </motion.a>
+        </MotionLink>
       </motion.div>
     </section>
   );
