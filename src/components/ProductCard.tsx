@@ -23,6 +23,7 @@ const ProductCard: React.FC<ProductProps> = ({ product }) => {
         src={product.image}
         alt={product.name}
         className="w-full h-48 object-cover"
+        loading="lazy"
       />
       <div className="p-4">
         <h2 className="text-xl font-semibold text-indigo-600 mb-2">
