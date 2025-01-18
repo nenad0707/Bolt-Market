@@ -17,7 +17,7 @@ const ProductCard: React.FC<ProductProps> = ({ product }) => {
 
   const handleAddToCart = () => {
     const cartItem = {
-      id: product.id,
+      id: product.id.toString(),
       name: product.name,
       price: product.price,
       quantity: 1,
