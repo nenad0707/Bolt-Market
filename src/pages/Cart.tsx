@@ -1,3 +1,5 @@
-const Cart = () => <div className="text-center py-20 text-xl">Your Cart</div>;
+import CartPage from "../components/CartPage";
+
+const Cart = () => <CartPage />;
 
 export default Cart;
