@@ -61,7 +61,7 @@ const Navbar = () => {
           <ShoppingCartIcon className="h-6 w-6" />
           <div className="absolute inset-0 rounded-full border-2 border-white opacity-50 hover:opacity-100 transition-all"></div>
           {totalItems > 0 && (
-            <div className="absolute -top-1 -right-1 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+            <div className="absolute -top-1 -right-1 bg-red-900 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
               {totalItems}
             </div>
           )}
