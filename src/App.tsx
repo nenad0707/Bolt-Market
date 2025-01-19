@@ -8,6 +8,7 @@ import Cart from "./pages/Cart";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import { CartProvider } from "./context/CartContext";
+import { ToastContainer } from "react-toastify";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
         <Footer />
         <ScrollToTop />
       </Router>
+      <ToastContainer />
     </CartProvider>
   );
 };

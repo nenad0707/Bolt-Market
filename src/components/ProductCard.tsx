@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useCart } from "../context/CartContext";
+import { toast } from "react-toastify";
 
 interface ProductProps {
   product: {
@@ -23,6 +24,7 @@ const ProductCard: React.FC<ProductProps> = ({ product }) => {
       quantity: 1,
       image: product.image,
     };
+    toast.success("Added to cart", { pauseOnHover: false });
     addToCart(cartItem);
   };
   return (

@@ -1,13 +1,27 @@
 import { useCart } from "../context/CartContext";
 import { motion } from "framer-motion";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const CartPage = () => {
   const { cart, updateQuantity, removeFromCart, clearCart } = useCart();
+  const navigate = useNavigate();
 
   const totalPrice = cart.reduce(
     (acc, item) => acc + item.price * item.quantity,
     0,
   );
+
+  const handleRemoveFromCart = (id: string) => {
+    removeFromCart(id);
+    toast.warn("Removed from cart", { pauseOnHover: false });
+  };
+
+  const handleClearCart = () => {
+    clearCart();
+    toast.warn("Cleared cart", { pauseOnHover: false });
+    navigate("/");
+  };
 
   return (
     <motion.div
@@ -16,7 +30,9 @@ const CartPage = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
     >
-      <h1 className="text-3xl font-bold text-indigoBlue mb-6">Your Cart</h1>
+      <h1 className="text-3xl font-bold text-indigoBlue mb-6 text-center">
+        Your Cart
+      </h1>
       {cart.length > 0 ? (
         <div className="bg-white rounded-xl shadow-md p-6">
           {cart.map((item) => (
@@ -59,7 +75,7 @@ const CartPage = () => {
                 ${(item.price * item.quantity).toFixed(2)}
               </p>
               <button
-                onClick={() => removeFromCart(item.id)}
+                onClick={() => handleRemoveFromCart(item.id)}
                 className="text-red-500 hover:text-red-700"
               >
                 Remove
@@ -72,7 +88,7 @@ const CartPage = () => {
             </h2>
             <div className="flex space-x-4">
               <button
-                onClick={clearCart}
+                onClick={handleClearCart}
                 className="bg-red-500 text-white px-6 py-2 rounded hover:bg-red-600"
               >
                 Clear Cart
