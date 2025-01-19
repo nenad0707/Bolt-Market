@@ -93,7 +93,10 @@ const CartPage = () => {
               >
                 Clear Cart
               </button>
-              <button className="bg-indigoBlue text-white px-6 py-2 rounded hover:bg-lightBlue">
+              <button
+                className="bg-indigoBlue text-white px-6 py-2 rounded hover:bg-lightBlue"
+                onClick={() => navigate("/")}
+              >
                 Checkout
               </button>
             </div>
