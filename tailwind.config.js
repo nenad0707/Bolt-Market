@@ -9,10 +9,7 @@ module.exports = {
         orange: "#F97316", // Accent orange
         lightOrange: "#FB923C", // Lighter orange
         lightGray: "#F7FAFC", // Light gray
-      },
-      backgroundImage: {
-        'diagonal-gradient': 'linear-gradient(135deg, #4F46E5, #6366F1, #FB923C)', // Dijagonalni gradijent
-      },
+      }, 
       fontFamily: {
         sans: ["Inter", "sans-serif"],
       },
