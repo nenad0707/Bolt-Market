@@ -7,7 +7,7 @@ Set-AzContext -Subscription $context.Id
 
 # Define variables for resources
 $resourceGroupName = "boltmarket-app-rg"    # Name of the resource group
-$resourceGroupLocation = "eastus"          # Location of the resource group
+$resourceGroupLocation = "eastus2"          # Location of the resource group
 $githubOrganizationName = 'nenad0707'      # GitHub organization or username
 $githubRepositoryName = 'Bolt-Market'      # GitHub repository name
 $applicationDisplayName = "boltmarket-app" # Azure application name

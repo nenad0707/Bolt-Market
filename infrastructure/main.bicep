@@ -2,7 +2,7 @@
 param staticWebAppName string = 'boltmarket-app'
 
 @description('The location where the Azure Static Web App will be deployed')
-param location string = 'East US'
+param location string = 'eastus2'
 
 @description('The GitHub repository URL for deployment')
 param repositoryUrl string = 'https://github.com/nenad0707/Bolt-Market'
