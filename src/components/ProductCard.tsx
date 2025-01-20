@@ -45,11 +45,11 @@ const ProductCard: React.FC<ProductProps> = ({ product }) => {
           {product.name}
         </h2>
         <p className="text-gray-600 text-sm mb-2">{product.description}</p>
-        <p className="text-lg font-bold text-orange-500 mb-4">
+        <p className="text-lg font-bold text-orange mb-4">
           ${product.price.toFixed(2)}
         </p>
         <button
-          className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-orange-500 transition"
+          className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-orange- transition"
           onClick={() => handleAddToCart()}
         >
           Add to Cart
