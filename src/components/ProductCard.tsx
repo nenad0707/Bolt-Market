@@ -49,7 +49,7 @@ const ProductCard: React.FC<ProductProps> = ({ product }) => {
           ${product.price.toFixed(2)}
         </p>
         <button
-          className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-orange- transition"
+          className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-orange transition"
           onClick={() => handleAddToCart()}
         >
           Add to Cart
