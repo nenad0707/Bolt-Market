@@ -1,41 +1,16 @@
 import { motion, useScroll, useTransform } from "framer-motion";
+import michaelImage from "../assets/images/michael.webp";
+import holdenImage from "../assets/images/holden.webp";
+import johnImage from "../assets/images/john.webp";
+import emilyImage from "../assets/images/emily.webp";
+import saraImage from "../assets/images/sara.webp";
 
 const testimonials = [
-  {
-    name: "Michael Brown",
-    role: "Frequent Shopper",
-    image: "src/assets/images/michael.webp",
-    testimony:
-      "Bolt Market has the best variety of electronics at unbeatable prices. Highly recommend for tech lovers!",
-  },
-  {
-    name: "Holden Davis",
-    role: "Loyal Customer",
-    image: "src/assets/images/holden.webp",
-    testimony:
-      "I've been shopping at Bolt Market for years and I'm always impressed with the quality of products and customer service.",
-  },
-  {
-    name: "John Johnson",
-    role: "Loyal Customer",
-    image: "src/assets/images/john.webp",
-    testimony:
-      "Bolt Market's customer service is exceptional. They always go above and beyond to ensure I'm satisfied with my purchases.",
-  },
-  {
-    name: "Emily Johnson",
-    role: "Verified Buyer",
-    image: "src/assets/images/emily.webp",
-    testimony:
-      "The clothing section is my favorite! Stylish, affordable, and delivery is always on time.",
-  },
-  {
-    name: "Sara Smith",
-    role: "Happy Customer",
-    image: "src/assets/images/sara.webp",
-    testimony:
-      "I ordered kitchen essentials and everything arrived quickly and perfectly packaged. Great quality and service!",
-  },
+  { name: "Michael Brown", role: "Frequent Shopper", image: michaelImage, testimony: "Bolt Market has the best variety of electronics at unbeatable prices. Highly recommend for tech lovers!" },
+  { name: "Holden Davis", role: "Loyal Customer", image: holdenImage, testimony: "I've been shopping at Bolt Market for years and I'm always impressed with the quality of products and customer service." },
+  { name: "John Johnson", role: "Loyal Customer", image: johnImage, testimony: "Bolt Market's customer service is exceptional. They always go above and beyond to ensure I'm satisfied with my purchases." },
+  { name: "Emily Johnson", role: "Verified Buyer", image: emilyImage, testimony: "The clothing section is my favorite! Stylish, affordable, and delivery is always on time." },
+  { name: "Sara Smith", role: "Happy Customer", image: saraImage, testimony: "I ordered kitchen essentials and everything arrived quickly and perfectly packaged. Great quality and service!" },
 ];
 
 const Testimonials = () => {
