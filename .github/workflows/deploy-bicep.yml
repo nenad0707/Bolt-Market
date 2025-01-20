@@ -1,0 +1,37 @@
+name: 🚀 Deploy Azure Resources with Bicep
+
+on:
+  workflow_dispatch: # Omogućava ručno pokretanje workflow-a
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy-bicep:
+    runs-on: ubuntu-latest
+    name: 🎯 Deploy Bicep Template
+    steps:
+      # Step 1: Checkout code
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v3
+
+      # Step 2: Login to Azure
+      - name: 🔑 Login to Azure
+        uses: azure/login@v1
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      # Step 3: Deploy Bicep Template
+      - name: ⚡ Deploy Bicep Template
+        uses: azure/arm-deploy@v1
+        with:
+          subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          resourceGroupName: boltmarket-app-rg
+          template: ./infrastructure/main.bicep
+
+      # Step 4: Deployment Complete
+      - name: ✅ Deployment Finished
+        run: echo "🎉 Bicep deployment completed successfully!"
