@@ -5,7 +5,11 @@ import { PhoneIcon, EnvelopeIcon } from "@heroicons/react/24/outline";
 const Contact = () => {
   const sectionVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, staggerChildren: 0.2 } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, staggerChildren: 0.2 },
+    },
   };
 
   return (
@@ -26,7 +30,8 @@ const Contact = () => {
           Get in Touch
         </h1>
         <p className="text-lg text-gray-600">
-          Have a question? We're here to help. Reach out via the form or contact details below.
+          Have a question? We're here to help. Reach out via the form or contact
+          details below.
         </p>
       </motion.section>
 
@@ -93,7 +98,9 @@ const Contact = () => {
         initial="hidden"
         animate="visible"
       >
-        <h3 className="text-xl font-bold mb-6 text-indigoBlue">Contact Information</h3>
+        <h3 className="text-xl font-bold mb-6 text-indigoBlue">
+          Contact Information
+        </h3>
         <div className="space-y-6">
           <div className="flex flex-col items-center">
             <PhoneIcon className="w-10 h-10 text-indigoBlue mb-2 hover:scale-110 transition-transform" />
