@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { SiLinkedin, SiGithub, SiGmail } from "react-icons/si";
 import { PhoneIcon, EnvelopeIcon } from "@heroicons/react/24/outline";
+import ContactIllustration from "../assets/images/contact-illustration.png";
 
 const Contact = () => {
   const sectionVariants = {
@@ -9,6 +10,16 @@ const Contact = () => {
       opacity: 1,
       y: 0,
       transition: { duration: 0.6, staggerChildren: 0.2 },
+    },
+  };
+
+  const buttonVariants = {
+    hover: {
+      scale: 1.05,
+      transition: { duration: 0.3 },
+    },
+    tap: {
+      scale: 0.95,
     },
   };
 
@@ -21,23 +32,45 @@ const Contact = () => {
     >
       {/* Hero Section */}
       <motion.section
-        className="text-center mb-12"
+        className="flex flex-col md:flex-row items-center justify-between text-center md:text-left mb-8 px-6 py-8 -mt-20"
         variants={sectionVariants}
         initial="hidden"
         animate="visible"
       >
-        <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigoBlue to-lightBlue mb-4">
-          Get in Touch
-        </h1>
-        <p className="text-lg text-gray-600">
-          Have a question? We're here to help. Reach out via the form or contact
-          details below.
-        </p>
+        <motion.img
+          src={ContactIllustration}
+          alt="Contact Us Illustration"
+          className="w-full max-w-sm md:max-w-md lg:max-w-lg mx-auto md:mx-0 md:w-1/2 object-contain"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          style={{ maxHeight: "400px" }}
+        />
+
+        <div className="mt-4 md:mt-0 md:ml-12 flex flex-col justify-center">
+          <motion.h1
+            className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigoBlue to-lightBlue mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            Get in Touch
+          </motion.h1>
+          <motion.p
+            className="text-lg text-gray-600"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            Have a question? We're here to help. Reach out via the form or
+            contact details below.
+          </motion.p>
+        </div>
       </motion.section>
 
       {/* Contact Form */}
       <motion.section
-        className="bg-white rounded-xl shadow-lg p-8 w-full max-w-3xl text-gray-800"
+        className="bg-white rounded-xl shadow-lg p-8 w-full max-w-3xl text-gray-800 -mt-16"
         variants={sectionVariants}
         initial="hidden"
         animate="visible"
@@ -82,12 +115,16 @@ const Contact = () => {
               required
             />
           </div>
-          <button
+          <motion.button
             type="submit"
-            className="w-full bg-gradient-to-r from-indigoBlue to-lightBlue text-white font-medium py-2 rounded-md hover:scale-105 transition-transform shadow-lg"
+            className="w-full bg-gradient-to-r from-indigoBlue to-lightBlue text-white font-medium py-2 rounded-md shadow-lg flex items-center justify-center relative overflow-hidden"
+            variants={buttonVariants}
+            whileHover="hover"
+            whileTap="tap"
           >
-            Submit
-          </button>
+            <span className="absolute inset-0 bg-gradient-to-r from-lightBlue to-indigoBlue opacity-30 blur-md"></span>
+            <span className="relative">Send Message</span>
+          </motion.button>
         </form>
       </motion.section>
 
