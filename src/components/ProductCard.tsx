@@ -1,7 +1,8 @@
-import React from "react";
+
 import { motion } from "framer-motion";
 import { useCart } from "../context/CartContext";
 import { toast } from "react-toastify";
+import { ShoppingCartIcon } from "@heroicons/react/24/outline"; 
 
 interface ProductProps {
   product: {
@@ -48,12 +49,18 @@ const ProductCard: React.FC<ProductProps> = ({ product }) => {
         <p className="text-lg font-bold text-orange mb-4">
           ${product.price.toFixed(2)}
         </p>
-        <button
-          className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-orange transition"
-          onClick={() => handleAddToCart()}
-        >
-          Add to Cart
-        </button>
+      <div className="flex justify-center mt-auto">
+          <motion.button
+            whileTap={{ scale: 0.95 }}
+            className="bg-gradient-to-r from-indigo-600 to-lightBlue text-white px-4 py-2 rounded-lg flex items-center justify-center space-x-2
+              hover:from-orange-500 hover:to-yellow-500
+              hover:scale-105 hover:shadow-lg transition-transform duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            onClick={() => handleAddToCart()}
+          >
+            <ShoppingCartIcon className="w-5 h-5" />
+            <span>Add to Cart</span>
+          </motion.button>
+     </div>
       </div>
     </motion.div>
   );
