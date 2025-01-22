@@ -42,26 +42,19 @@ const Navbar = () => {
 
       {/* Desktop navigation */}
       <ul className="hidden md:flex space-x-6">
-        <li>
-          <Link to="/" className="hover:text-lightOrange transition-all">
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link to="/products" className="hover:text-lightOrange transition-all">
-            Products
-          </Link>
-        </li>
-        <li>
-          <Link to="/about" className="hover:text-lightOrange transition-all">
-            About
-          </Link>
-        </li>
-        <li>
-          <Link to="/contact" className="hover:text-lightOrange transition-all">
-            Contact
-          </Link>
-        </li>
+      <ul className="hidden md:flex space-x-6">
+        {["Home", "Products", "About", "Contact"].map((text) => (
+          <li key={text}>
+            <Link
+              to={text === "Home" ? "/" : `/${text.toLowerCase()}`}
+              className="text-lg hover:text-lightOrange hover:underline transition-all duration-300"
+            >
+              {text}
+            </Link>
+          </li>
+        ))}
+</ul>
+
       </ul>
 
       {/* Cart icon */}
