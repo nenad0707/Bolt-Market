@@ -56,6 +56,7 @@ const ProductCard: React.FC<ProductProps> = ({ product }) => {
               hover:from-orange-500 hover:to-yellow-500
               hover:scale-105 hover:shadow-lg transition-transform duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             onClick={() => handleAddToCart()}
+            aria-label="Add product to cart"
           >
             <ShoppingCartIcon className="w-5 h-5" />
             <span>Add to Cart</span>

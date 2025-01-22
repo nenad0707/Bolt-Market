@@ -102,13 +102,14 @@ const CartPage = () => {
                   <p className="text-orange font-semibold text-lg">
                     ${(item.price * item.quantity).toFixed(2)}
                   </p>
-                  <button
+                    <button
                     onClick={() => removeFromCart(item.id)}
                     className="flex items-center space-x-2 text-red-500 hover:text-red-700"
-                  >
+                    aria-label={`Remove ${item.name} from cart`}
+                    >
                     <TrashIcon className="w-5 h-5" />
                     <span>Remove</span>
-                  </button>
+                    </button>
                 </div>
               </motion.div>
             ))}
@@ -123,6 +124,7 @@ const CartPage = () => {
             <button
               onClick={handleClearCart}
               className="flex items-center space-x-2 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-400"
+              aria-label="Clear cart"
             >
               <TrashIcon className="w-5 h-5" />
               <span>Clear Cart</span>
@@ -130,6 +132,7 @@ const CartPage = () => {
             <button
               onClick={() => navigate("/")}
               className="flex items-center space-x-2 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-400"
+              aria-label="Proceed to checkout"
             >
               <ShoppingCartIcon className="w-5 h-5" />
               <span>Checkout</span>
@@ -141,12 +144,13 @@ const CartPage = () => {
       ) : (
         <div className="text-center py-20">
           <p className="text-xl text-gray-500">Your cart is empty.</p>
-          <button
+            <button
             onClick={() => navigate("/products")}
             className="mt-4 bg-indigoBlue text-white px-6 py-2 rounded hover:bg-lightBlue transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-400"
-          >
+            aria-label="Continue shopping"
+            >
             Continue Shopping
-          </button>
+            </button>
         </div>
       )}
     </motion.div>

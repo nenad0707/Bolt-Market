@@ -101,6 +101,7 @@ const Navbar = () => {
             <button
               className="absolute top-4 right-4 text-white"
               onClick={closeMenu}
+              aria-label="Close menu"
             >
               <XMarkIcon className="h-8 w-8" />
             </button>
