@@ -116,26 +116,26 @@ const CartPage = () => {
 
           {/* Total price and buttons */}
           <div className="flex flex-col md:flex-row justify-between items-center mt-6 space-y-4 md:space-y-0 md:space-x-4">
-  <h2 className="text-2xl font-bold text-indigoBlue">
-    Total: ${totalPrice.toFixed(2)}
-  </h2>
-  <div className="flex flex-wrap justify-center gap-4">
-    <button
-      onClick={handleClearCart}
-      className="flex items-center space-x-2 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-400"
-    >
-      <TrashIcon className="w-5 h-5" />
-      <span>Clear Cart</span>
-    </button>
-    <button
-      onClick={() => navigate("/checkout")}
-      className="flex items-center space-x-2 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-400"
-    >
-      <ShoppingCartIcon className="w-5 h-5" />
-      <span>Checkout</span>
-    </button>
-  </div>
-</div>
+              <h2 className="text-2xl font-bold text-indigoBlue">
+               Total: ${totalPrice.toFixed(2)}
+              </h2>
+           <div className="flex flex-wrap justify-center gap-4">
+            <button
+              onClick={handleClearCart}
+              className="flex items-center space-x-2 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-400"
+            >
+              <TrashIcon className="w-5 h-5" />
+              <span>Clear Cart</span>
+            </button>
+            <button
+              onClick={() => navigate("/")}
+              className="flex items-center space-x-2 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition-transform transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-400"
+            >
+              <ShoppingCartIcon className="w-5 h-5" />
+              <span>Checkout</span>
+            </button>
+          </div>
+        </div>
 
         </motion.div>
       ) : (
