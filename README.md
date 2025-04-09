@@ -1,3 +1,5 @@
+[![🚀 Deploy Bolt Market App](https://github.com/nenad0707/Bolt-Market/actions/workflows/deploy-boltmarket.yml/badge.svg)](https://github.com/nenad0707/Bolt-Market/actions/workflows/deploy-boltmarket.yml)
+
 # 🛒 Bolt Market - Modern E-Commerce Platform
 
 ![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)
