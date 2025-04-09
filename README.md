@@ -49,7 +49,7 @@
 
 ## 🚀 Live Demo
 
-[Check out the live demo on Azure](https://nice-mud-0ede4fd0f.4.azurestaticapps.net/)
+[![Bolt Market Demo](https://img.shields.io/badge/Bolt_Market-Live%20Demo-4F46E5?style=for-the-badge&logo=microsoft-azure&logoColor=white)](https://nice-mud-0ede4fd0f.4.azurestaticapps.net/)
 
 > Deployment is managed through Azure Static Web Apps and GitHub Actions.
 
