@@ -56,17 +56,20 @@
 
 ## 🖼️ Screenshots
 
-### Homepage
-![Homepage](public/images/screenshots/homepage.png)
+### 🏠 Homepage
+![Homepage](./public/images/products/screenshots/home.png)
 
-### Products Page
-![Products](public/images/screenshots/products.png)
+### 🛍️ Products Page
+![Products](./public/images/products/screenshots/products.png)
 
-### Shopping Cart
-![Cart](public/images/screenshots/cart.png)
+### 🛒 Shopping Cart
+![Cart](./public/images/products/screenshots/cart.png)
 
-### About Page
-![About](public/images/screenshots/about.png)
+### 📝 About Page
+![About](./public/images/products/screenshots/about.png)
+
+### 📞 Contact Page
+![Contact](./public/images/products/screenshots/contact.png)
 
 ## 🛠️ Tech Stack
 
